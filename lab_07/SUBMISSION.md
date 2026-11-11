@@ -66,4 +66,4 @@ https://github.com/potiwat/RAE67_bio_ins
 
 The completed FSM policy from Lab 06 is installed at [lamp_week07/student_policy.py](lamp_week07/student_policy.py). The historical protocol called the same bytes completed_policy.py. The [course README](README.md) describes how to copy the policy into a ROS workspace when needed.
 
-The proposal due date, simulation date, and real-robot experiment date in the completed worksheet still need confirmation. Confirm the instructor’s delivery channel if the archive must also be uploaded separately.
+The worksheet, proposal, and proposal JSON use the same relative research schedule: Week 1 proposal and AHM/CPG preparation, Week 2 ROS 2 setup and 600-second simulation, Week 3 real-robot trials after safety verification and consent, and Week 4 evidence review and reporting. The official course deadline follows the instructor’s announcement. Confirm the instructor’s delivery channel if the archive must also be uploaded separately.

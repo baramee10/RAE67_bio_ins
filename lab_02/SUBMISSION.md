@@ -16,6 +16,6 @@ python lab02.py --controller-source student --protocol robustness-short --condit
 python lab02.py --controller-source student --protocol robustness-short --condition C2 --out results/repro_c2
 ```
 
-The course repository is publicly accessible. For current run instructions, use the [course README](README.md) and the commands above. Recorded configurations retain the original machine path as provenance.
+The course repository is publicly accessible. For current run instructions, use the [course README](README.md) and the commands above. Recorded configurations identify the student controller by its filename relative to the lab directory and preserve its original SHA-256.
 
 The two negative starter integration tests in this checkout point to an exact copy of the upstream starter in `tests/fixtures/student_controller_starter.py`. Their assertions are unchanged. The remaining tests and course grader retain their upstream source.
