@@ -1,0 +1,34 @@
+﻿Lab 05 - Reproducibility Record
+
+Source:
+https://github.com/potiwat/RAE67_bio_ins
+
+Environment:
+Python 3.14.6
+Windows PowerShell
+No additional Python packages required
+
+Original experiment commands:
+
+1. Comparison (B0-B3)
+py -3 lab05.py --condition all --profile step --mapping both --output-dir results/comparison_01
+
+2. One-Factor (Phi-only)
+py -3 lab05.py --condition all --profile step --mapping phi-only --output-dir results/phi_only_01
+
+3. Fault
+py -3 lab05.py --condition all --profile fault --output-dir results/fault_01
+
+4. Contact
+py -3 contact_demo.py --output-dir results/contact_01
+
+Evidence archive:
+Lab05_evidence.zip
+
+Note:
+These are the original commands.
+For reruns, use new output directory names because the
+runner does not overwrite existing results.
+
+All experiments use the proposed course model,
+not measurements from physical robot hardware.

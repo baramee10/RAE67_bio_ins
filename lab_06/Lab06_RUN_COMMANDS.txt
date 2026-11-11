@@ -1,0 +1,43 @@
+﻿Lab 06 - Reproducibility Record
+
+Source:
+https://github.com/potiwat/RAE67_bio_ins/tree/main/lab_06
+
+Environment:
+Windows PowerShell
+Python 3.14.6
+Python standard library only
+
+FSM contract:
+baseline
+
+1. Validate student policy
+py -3 check_submission.py
+
+Result: PASS - 40/40 transition pairs
+
+2. Compare C0 and C1 using 3 paired seeds
+py -3 lab06.py --policy student --condition all --repeats 3 --output-dir results/completed_01
+
+Seeds: 41, 42, 43
+Conditions: C0 raw, C1 guarded
+
+3. Replay C1 using saved sensor input
+py -3 lab06.py --policy student --condition C1 --repeats 1 --replay results/completed_01/inputs_r01.csv --output-dir results/replay_01
+
+Replay validation:
+raw_C1_r01.csv: SHA-256 identical
+events_C1_r01.csv: SHA-256 identical
+
+Summary across three seeds:
+C0 state transitions: 202
+C1 state transitions: 28
+C0 primary pass <=1s: 19/21
+C1 primary pass <=1s: 21/21
+
+Limitations:
+All results use an offline software simulation.
+Physical robot response and hardware safety were not measured.
+
+Use new output directory names when rerunning to
+avoid overwriting the existing evidence.

@@ -18,7 +18,13 @@ def transition(current_state: str, event: str) -> str | None:
     if event in ("button", "approach"):
         return "interested"
     # TODO 1: touch should enter happy from any state except afraid.
+    if event == "touch":
+        return "happy"
     # TODO 2: timeout should return interested/happy to normal.
+    if event == "timeout" and current_state in ("interested", "happy"):
+        return "normal"
     # TODO 3: idle should change normal to sleepy.
     # Keep unrelated combinations as None. Test and explain every table row.
+    if event == "idle" and current_state == "normal":
+        return "sleepy"
     return None

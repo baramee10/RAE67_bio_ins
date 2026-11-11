@@ -61,7 +61,7 @@ class StudentIntegrationTests(unittest.TestCase):
         self.assertEqual(adapter.step(0.0, None, False), ("FAR", 0.0, None))
 
     def test_unfinished_starter_fails_before_writing_results(self):
-        student_file = Path(__file__).resolve().parents[1] / "student_controller.py"
+        student_file = Path(__file__).resolve().parent / "fixtures" / "student_controller_starter.py"
         with tempfile.TemporaryDirectory() as temp_dir:
             output = Path(temp_dir) / "student_results"
             with self.assertRaisesRegex(NotImplementedError, "unfinished TODO"):
@@ -72,7 +72,7 @@ class StudentIntegrationTests(unittest.TestCase):
             self.assertFalse(output.exists())
 
     def test_diagnostic_report_identifies_unfinished_starter(self):
-        student_file = Path(__file__).resolve().parents[1] / "student_controller.py"
+        student_file = Path(__file__).resolve().parent / "fixtures" / "student_controller_starter.py"
         report = evaluate_submission(student_file)
         self.assertGreater(report["failed"], 0)
         self.assertEqual(report["checks"][0]["status"], "PASS")
