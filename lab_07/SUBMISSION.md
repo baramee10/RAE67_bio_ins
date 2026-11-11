@@ -57,7 +57,7 @@ To reproduce the offline experiment in a new directory:
 - ROS 2 and micro-ROS hardware integration is not verified.
 - Real robot tests and the 600-second human interaction
   scenario remain planned work.
-- The original offline evidence is stored locally in `results/completed_01`, including six trials, the policy snapshot, and the SHA-256 manifest. Confirm the evidence delivery channel with the instructor.
+- The original six offline trials, raw traces, configs, metrics, source snapshot and SHA-256 manifest are packaged in [Lab07_offline_evidence.zip](Lab07_offline_evidence.zip). Extract it from this directory to recover `results/completed_01/`. Fresh runner outputs remain ignored.
 
 ## Attribution
 
@@ -65,3 +65,5 @@ Based on teaching materials and starter code from:
 https://github.com/potiwat/RAE67_bio_ins
 
 The completed FSM policy from Lab 06 is installed at [lamp_week07/student_policy.py](lamp_week07/student_policy.py). The historical protocol called the same bytes completed_policy.py. The [course README](README.md) describes how to copy the policy into a ROS workspace when needed.
+
+The proposal due date, simulation date, and real-robot experiment date in the completed worksheet still need confirmation. Confirm the instructor’s delivery channel if the archive must also be uploaded separately.

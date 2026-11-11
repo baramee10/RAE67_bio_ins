@@ -89,3 +89,5 @@ Based on Lab 06 materials from:
 https://github.com/potiwat/RAE67_bio_ins/tree/main/lab_06
 
 Course-provided simulation and checker files are included to make the submission reproducible.
+
+[Checker demonstration](CHECKER_DEMONSTRATION.md) reproduces a single failing baseline transition in a temporary policy and compares it with the submitted policy.
